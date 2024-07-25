@@ -2,10 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // let name = "Samit";
 
@@ -36,19 +36,19 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="SamitSaha" about="About Samit" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
 
       <div className="container my-3">
-      <Routes>
+      {/* <Routes>
         <Route exact path="/about" element={<About mode={mode}/>} />
         <Route exact path="/" element={<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert}/>}  />
-      </Routes> 
-      
+      </Routes>  */}
+      <TextForm heading="Enter your text here" mode={mode} showAlert={showAlert}/>
       </div>
 
-    </Router>
+    {/* </Router> */}
     </>
     
   );
